@@ -1,0 +1,212 @@
+@import 'node_modules/bootstrap/scss/bootstrap.scss';
+@import "~@/assets/fonts/fonts";
+
+$main-color: #402483;
+$color-white: #FFFFFF;
+
+body {
+  height: 100% !important;
+  background: $main-color !important;
+}
+
+#app{
+  overflow-x: hidden;
+}
+
+.container-xl{
+  max-width: 1698px !important;
+}
+.app {
+  padding-top: 35px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto !important;
+  max-width: 1698px;
+  background: $main-color;
+
+  @media (max-width: 768px){
+    padding-top: 0;
+  }
+}
+
+* {
+  font-family: 'Stolz';
+  color: $color-white;
+}
+
+a {
+  text-decoration: none !important;
+  color: $color-white !important;
+}
+
+.btns {
+  border-radius: 16px;
+  padding: 16px 32px;
+  gap: 10px;
+  display: block;
+  font: 24px/29px sans-serif;
+}
+
+.btn-orange {
+  background: #EA5707;
+  border: 0;
+}
+
+.btn-linear {
+  border: 2px solid #FFFFFF;
+}
+
+.title-section {
+  font: 700 96px/105.6px 'Stolz Bold';
+  text-transform: uppercase;
+  width: 70%;
+  @media (max-width: 1280px) {
+    font: 700 76px/105.6px 'Stolz Bold';
+  }
+  @media(max-width: 768px){
+    font: 56px/110% 'Stolz Bold';
+    text-align: center;
+    width: 100%;
+  }
+  @media (max-width: 448px) {
+    font: 24px/26px 'Stolz Bold';
+  }
+}
+
+//Шапка
+.header {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-start;
+  .head{
+    display: flex;
+    flex: 1 0 75%;
+    padding-top: 20px;
+    @media (max-width: 1068px){
+      padding-top: 15px;
+    }
+    .wrap{
+      margin: 0 10px;
+    }
+  }
+  .header-item{
+    display: flex;
+    &.brands-logo{
+      justify-content: space-around;
+      flex: 1;
+    }
+  }
+  
+  .logo {
+    flex: 1 0 24%;
+    max-width: 337px;
+    margin-right: 7.5px;
+
+    img {
+      width: 100%;
+    }
+  }
+  .wrap_stroika {
+    max-width: 184px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .wrap_makita {
+    max-width: 251px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .wrap_s100del {
+    max-width: 228px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .phone {
+    a {
+      font: 36px/43px "Stolz Light";
+      @media (min-width: 769px) and (max-width: 1008px) {
+        font: 23px/33px "Stolz Light";
+      }
+      @media (max-width: 768px) {
+        font: 23px/33px "Stolz Light";
+      }
+      @media (max-width: 447px) {
+        font: 15px/33px "Stolz Light";
+      }
+      @media (max-width: 380px) {
+        font: 13px/15.6px "Stolz Light";
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+    align-items: center;
+
+    .logo {
+      flex: auto;
+      max-width: unset ;
+      margin-right: unset;
+
+      img {
+        width: 100%;
+      }
+    }
+    .head{
+      align-items: center
+    }
+  }
+  @media (max-width: 547px) {
+    .wrap{
+      margin: 0 5px;
+    }
+  }
+}
+
+.shadow-rad{
+  overflow:hidden;
+}
+.shadow-rad:before {
+  border-radius: 100%;
+  content: "";
+  width: 380px;
+  height: 380px;
+  position: absolute;
+  background: #6d388d;
+  opacity: 0.7;
+  top: 40px;
+  left: 0;
+  z-index: 0;
+  overflow:hidden;
+  box-shadow: 20px 20px 380px 330px rgb(109 56 141);
+  @media (max-width: 380px) {
+    width: 300px;
+  }
+}
+
+.anim-show {
+  opacity: 0; /*Элемент полностью прозрачный (невидимый)*/
+  transition: 1s; /*Скорость перехода состояния элемента*/
+  animation: show 3s 1; /* Указываем название анимации, её время и количество повторов*/
+  animation-fill-mode: forwards; /* Чтобы элемент оставался в конечном состоянии анимации */
+  animation-delay: 1s; /* Задержка перед началом */
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
