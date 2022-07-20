@@ -5,7 +5,7 @@
         до окончания розыгрыша осталось
       </h1>
       <div class="img-section shadow-rad">
-        <img src="~@/assets/image/products/time.svg" alt="">
+        <img src="~@/assets/image/products/time.png" alt="">
       </div>
     </div>
     <div class='timer'>

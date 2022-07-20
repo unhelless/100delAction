@@ -4,10 +4,10 @@
       <div class="title">
         <h1 class="title-section">Как участвовать?</h1>
         <div class="text_description">
-          Больше зарегистрированных чеков — больше шанс получить подарки!
+          Больше зарегистрированных чеков — больше шансов получить подарки!
         </div>
       </div>
-      <div class="img-title shadow-rad_blue" data-aos="fade-in" data-aos-duration="800">
+      <div class="img-title shadow-rad_blue" >
         <img src="~@/assets/image/products/umbrella.svg" alt="">
       </div>
     </div>
@@ -18,7 +18,7 @@
           01
         </span>
           <div class="text_description">
-            В период с 25.07.2022 по 21.07.2022 покупайте товары
+            В период с 25.07.2022 по 21.08.2022 покупайте товары
             в магазинах 100Дел и Стройка на сумму от 3000 рублей
           </div>
         </div>
@@ -52,7 +52,7 @@
             <div class="text-img_description">
             </div>
           </div>
-          <div class="wrap_img" data-aos="zoom-out-down" data-aos-duration="1000">
+          <div class="wrap_img">
             <div class="img">
               <img src="~@/assets/image/products/kosilka.svg" alt="">
             </div>
@@ -60,7 +60,7 @@
               Триммер аккумуляторный LXT 18В 2в1 триммер / кромкорез
             </div>
           </div>
-          <div class="wrap_img" data-aos="zoom-out-up" data-aos-duration="1000">
+          <div class="wrap_img" >
             <div class="img">
               <img src="~@/assets/image/products/makita_3.svg" alt="">
             </div>
@@ -68,7 +68,7 @@
               Вентилятор аккумуляторный LXT 18В, 180мм, 3 скорости
             </div>
           </div>
-          <div class="wrap_img" data-aos="zoom-out-down" data-aos-duration="800">
+          <div class="wrap_img" >
             <div class="img">
               <img src="~@/assets/image/products/makita_2.svg" alt="">
             </div>
@@ -80,14 +80,25 @@
       </div>
     </div>
     <div class="wrap-button">
-      <button class="btn-orange btns">Зарегистрировать чек</button>
+      <a class="btn-orange btns" href="#form" @click.prevent="linkedForm" ref="link_form">Зарегистрировать чек</a>
     </div>
   </section>
 </template>
 
 <script>
 export default {
-  name: "SectionComponent3"
+  name: "SectionComponent3",
+  methods:{
+
+    linkedForm(event){
+      console.log(this.$refs);
+      const blockID = this.$refs.link_form.getAttribute('href').substr(1)
+      document.getElementById(blockID).scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      })
+    }
+  }
 }
 </script>
 

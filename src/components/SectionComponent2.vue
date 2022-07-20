@@ -1,7 +1,7 @@
 <template>
   <section class="section">
     <h1 class="title-section">
-      Что можно выбрать?
+      Что можно выиграть?
     </h1>
     <div class="wrap-items">
       <div  class="item">
@@ -20,7 +20,7 @@
           <img src="~@/assets/image/products/termos.svg" alt="" >
         </div>
       </div>
-      <div data-aos="fade-down" data-aos-duration="900" class="item">
+      <div  class="item">
         <div class="item-img img img-mobile-rigth">
           <img src="~@/assets/image/products/makita_3.svg" alt="">
         </div>
@@ -33,7 +33,7 @@
           </div>
         </div>
       </div>
-      <div data-aos="fade-up" data-aos-duration="500" class="item">
+      <div class="item">
         <div class="item-text">
           <div class="text-description">
             4 сертификата по
@@ -49,7 +49,7 @@
           <img src="~@/assets/image/products/porfel.png" alt="">
         </div>
       </div>
-      <div data-aos="fade-down" data-aos-duration="900" class="item">
+      <div  class="item">
         <div class="item-img img img-right shadow-rad_blue">
           <img src="~@/assets/image/products/alisa.png" alt="">
         </div>
@@ -76,22 +76,22 @@ export default {
   @media(max-width: 768px){
     margin-top: 96px;
   }
-  .title-section {
-    font: 700 96px/110% 'Stolz Bold';
-    text-transform: uppercase;
-    width: 70%;
-    @media (max-width: 1280px) {
-      font: 700 76px/110% 'Stolz Bold';
-    }
-    @media(max-width: 768px){
-      font: 56px/110% 'Stolz Bold';
-      text-align: center;
-      width: 100%;
-    }
-    @media (max-width: 448px) {
-      font: 24px/26px 'Stolz Bold';
-    }
-  }
+  //.title-section {
+  //  font: 700 96px/110% 'Stolz Bold';
+  //  text-transform: uppercase;
+  //  width: 70%;
+  //  @media (max-width: 1280px) {
+  //    font: 700 76px/110% 'Stolz Bold';
+  //  }
+  //  @media(max-width: 768px){
+  //    font: 56px/110% 'Stolz Bold';
+  //    text-align: center;
+  //    width: 100%;
+  //  }
+  //  @media (max-width: 448px) {
+  //    font: 24px/26px 'Stolz Bold';
+  //  }
+  //}
 
   .wrap-items {
     display: flex;

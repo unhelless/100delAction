@@ -2,7 +2,7 @@
   <footer>
     <div class="container-xl footer">
       <div class="logo shadow-rad">
-        <img src="~@/assets/image/header/prize.svg" alt="">
+        <img src="~@/assets/image/header/prize.png" alt="">
       </div>
       <div class="footer-menu_links shadow-rad_blue">
         <ul>

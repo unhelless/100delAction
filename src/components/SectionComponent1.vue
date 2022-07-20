@@ -7,21 +7,31 @@
         И участвуй в еженедельном розыгрыше призов
       </div>
       <div class="purchase-btns">
-        <a class="btns btn-orange">Хочу участвовать</a>
-        <a class="btns btn-linear">Зарегистрировать чек</a>
+        <a class="btns btn-orange" href="#form" ref="link_form">Хочу участвовать</a>
+        <a class="btns btn-linear" href="#form" ref="link_form">Зарегистрировать чек</a>
       </div>
     </div>
     <div class="purchase-wrap_images">
       <!--      Подумать над реализацией картинок-->
-      <img src="~@/assets/image/products/kosilka.svg" alt="" class="item-img kosilka anim-show">
-      <img src="~@/assets/image/products/makita_2.svg" alt="" class="item-img makita anim-show">
+      <img src="~@/assets/image/products/kosilka.png" alt="" class="item-img kosilka anim-show">
+      <img src="~@/assets/image/products/makita_2.png" alt="" class="item-img makita anim-show">
     </div>
   </section>
 </template>
 
 <script>
 export default {
-  name: "SectionComponent1"
+  name: "SectionComponent1",
+  methods:{
+    linkedForm(event){
+      console.log(this.$refs);
+      const blockID = this.$refs.link_form.getAttribute('href').substr(1)
+      document.getElementById(blockID).scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      })
+    }
+  }
 }
 </script>
 

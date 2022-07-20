@@ -2,8 +2,8 @@
   <HeaderComponent class="container-xl" />
   <SectionComponent1 class="container-xl" />
   <SectionComponent2 class="container-xl" />
-  <SectionComponent3 class="container-xl" />
-  <FormComponent/>
+  <SectionComponent3 class="container-xl"/>
+  <FormComponent id="form"/>
   <Winners />
   <TimeComponent/>
   <AddressComponent/>
@@ -21,7 +21,6 @@ import Winners from "@/components/Winners";
 import TimeComponent from "@/components/TimeComponent";
 import SectionComponent3 from "@/components/SectionComponent3";
 import AddressComponent from "@/components/AddressComponent";
-
 export default {
   name: 'App',
   components:{
@@ -34,6 +33,8 @@ export default {
     Winners,
     AddressComponent,
     FooterComponent
+  },
+  methods:{
   }
 }
 </script>
