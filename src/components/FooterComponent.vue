@@ -7,12 +7,12 @@
       <div class="footer-menu_links shadow-rad_blue">
         <ul>
           <li class="li-link">
-            <a href="" class="link">
+            <a href="policy/Публичная Оферта.docx" download class="link">
               Правила акции
             </a>
           </li>
           <li class="li-link">
-            <a href="" class="link">
+            <a href="policy/Политика конфиденциальности.docx" download class="link">
               Политика конфиденциальности
             </a>
           </li>

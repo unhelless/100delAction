@@ -7,7 +7,7 @@
         И участвуй в еженедельном розыгрыше призов
       </div>
       <div class="purchase-btns">
-        <a class="btns btn-orange" href="#form" ref="link_form">Хочу участвовать</a>
+        <a class="btns btn-orange" href="#sect1" ref="link_form">Хочу участвовать</a>
         <a class="btns btn-linear" href="#form" ref="link_form">Зарегистрировать чек</a>
       </div>
     </div>
@@ -30,6 +30,7 @@ export default {
         behavior: 'smooth',
         block: 'start'
       })
+      history.pushState('', document.title, window.location.pathname);
     }
   }
 }

@@ -99,12 +99,14 @@ export default {
     showRemaining() {
       const timer = setInterval(() => {
         const now = new Date();
-        // const end = new Date(2022, 7, 25, 0, 0,0, 0);
-        const end = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 7);
-        const distance = end.getTime() - now.getTime();
+        const end = new Date(2022, 6, 31, 0, 0,0, 0);
+        // const end = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 7);
 
-        if (distance < 0) {
-          this.end = now.getMonth() + 1;
+        if(now.getTime() >= end.getTime()){
+          end.setDate(end.getDate()+7);
+        }
+        const distance = end.getTime() - now.getTime();
+        if (end.getTime() - now.getTime() < 0) {
           clearInterval(timer);
           return;
         }

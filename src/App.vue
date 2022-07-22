@@ -2,8 +2,8 @@
   <HeaderComponent class="container-xl" />
   <SectionComponent1 class="container-xl" />
   <SectionComponent2 class="container-xl" />
-  <SectionComponent3 class="container-xl"/>
   <FormComponent id="form"/>
+  <SectionComponent3 class="container-xl"/>
   <Winners />
   <TimeComponent/>
   <AddressComponent/>

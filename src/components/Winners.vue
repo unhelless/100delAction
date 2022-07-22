@@ -1,31 +1,31 @@
 <template>
-<section class="section container-xl" >
+<section class="section-winner container-xl" >
   <h1 class="title-section">Победители</h1>
   <div class="wrap-items">
     <div class="item">
-      <div class="item-title">
+      <a class="item-title" href="upload/1-tour.xls" download>
         Первый тур
-      </div>
+      </a>
     </div>
     <div class="item">
-      <div class="item-title">
+      <a class="item-title" href="upload/2-tour.xls" download>
         Второй тур
-      </div>
+      </a>
     </div>
     <div class="item">
-      <div class="item-title">
+      <a class="item-title" href="upload/3-tour.xls" download>
         Третий тур
-      </div>
+      </a>
     </div>
     <div class="item">
-      <div class="item-title">
+      <a class="item-title" href="upload/4-tour.xls" download>
         Четвертый тур
-      </div>
+      </a>
     </div>
     <div class="item">
-      <div class="item-title">
+      <a class="item-title" href="upload/5-tour.xls" download>
         Гранд-финал
-      </div>
+      </a>
     </div>
   </div>
 </section>
@@ -38,42 +38,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-    .section{
-      margin-top: 104px;
-      .wrap-items{
-        margin-top: 104px;
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-
-        .item{
-          flex: 1;
-          margin-right: 20px;
-          min-width: 314px;
-        }
-
-        .item-title{
-          border: 2px solid #FFFFFF;
-          border-radius: 16px;
-          padding: 16px 32px;
-          gap: 10px;
-          margin-bottom: 20px;
-          text-align: center;
-          font: 24px/29px 'Stolz Light';
-          &:hover{
-            background: #EA5707;
-            border: 2px solid #EA5707;
-          }
-        }
-        @media (max-width: 768px) {
-          margin-top: 34px;
-        }
-        @media (max-width: 691px) {
-          flex-direction: column;
-          .item{
-            margin-right: unset;
-          }
-        }
-      }
-    }
+.item-title{
+  display: block;
+}
 </style>

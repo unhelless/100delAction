@@ -211,3 +211,43 @@ a {
     opacity: 1;
   }
 }
+
+
+.section-winner{
+  margin-top: 104px;
+  .wrap-items{
+    margin-top: 104px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    .item{
+      flex: 1;
+      margin-right: 20px;
+      min-width: 314px;
+    }
+
+    .item-title{
+      border: 2px solid #FFFFFF;
+      border-radius: 16px;
+      padding: 16px 32px;
+      gap: 10px;
+      margin-bottom: 20px;
+      text-align: center;
+      font: 24px/29px 'Stolz Light';
+      &:hover{
+        background: #EA5707;
+        border: 2px solid #EA5707;
+      }
+    }
+    @media (max-width: 768px) {
+      margin-top: 34px;
+    }
+    @media (max-width: 691px) {
+      flex-direction: column;
+      .item{
+        margin-right: unset;
+      }
+    }
+  }
+}

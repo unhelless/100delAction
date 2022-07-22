@@ -1,5 +1,5 @@
 <template>
-  <section class="section">
+  <section class="section" id="sect1">
     <div class="wrap-title">
       <div class="title">
         <h1 class="title-section">Как участвовать?</h1>

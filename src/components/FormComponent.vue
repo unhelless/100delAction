@@ -5,7 +5,7 @@
       <div class="form-result" :class="{active : result}">
         <span class="toggleMenu close" @click="close"></span>
         <div class="result">
-          Спасибо, ваш чек зарегистрирован!
+          {{message}}
         </div>
       </div>
       <form action="" class="form success" @submit.prevent="FormSubmit">
@@ -34,9 +34,13 @@
         </div>
         <div class="form-group">
           <label for="DATA_POKUPKI">Дата покупки</label>
-          <input id="DATA_POKUPKI" type="text" class="input input-text" v-model.trim="DATA_POKUPKI"
+          <input id="DATA_POKUPKI"
+                 type="text"
+                 class="input input-text" v-model.trim="DATA_POKUPKI"
                  :class="{error_required: v$.DATA_POKUPKI.$dirty && v$.DATA_POKUPKI.required && DATA_POKUPKI === ''}"
-                 placeholder="11/07/22">
+                 placeholder="11/07/2022"
+                 v-maska="'##/##/####'"
+          >
         </div>
         <div class="form-group">
           <label for="PHONE">Номер телефона</label>
@@ -47,6 +51,7 @@
               :class="{error_required: v$.PHONE.$dirty && v$.PHONE.required && PHONE === ''}"
               v-model.trim="PHONE"
               placeholder="+7 "
+              v-maska="'+7 (###) ###-####'"
           >
         </div>
         <div class="form-group">
@@ -78,15 +83,15 @@
 </template>
 
 <script>
-import {required, minValue} from "@vuelidate/validators";
+import {required} from "@vuelidate/validators";
 import useVuelidate from "@vuelidate/core";
-
 export default {
   name: "FormComponent",
   data() {
     return {
       form: '',
       result: false,
+      message:'',
       select: false,
       selected: 'Выберите магазин',
       options: [
@@ -111,7 +116,6 @@ export default {
         'Стройка на Чайковского',
         'Стройка на Трактовой',
         'Стройка на Сергеева',
-        'Стройка на Трактовой',
         'Стройка на Автомобилистов',
         '100ДЕЛ на Первомайской',
         'Стройка на Братск Центр',
@@ -121,6 +125,7 @@ export default {
         '100ДЕЛ на Ине',
         '100ДЕЛ на Хасановской',
         '100ДЕЛ на Володарского',
+        'Интернет магазин Стройка',
       ],
       FIO: "",
       FN: "",
@@ -148,7 +153,7 @@ export default {
         return
       } else {
 
-        const url = 'http://kraton.test/new/ajax/ajax.php';
+        const url = '/ajax/ajax.php';
         const data = {
           FIO: this.FIO,
           FN: this.FN,
@@ -162,18 +167,18 @@ export default {
         console.log(form)
         try {
            fetch(url, {
-            method: 'POST', // или 'PUT'
+            method: 'post', // или 'PUT'
             body: form, // данные могут быть 'строкой' или {объектом}!
-            mode: 'no-cors',
             headers: {
-              'Content-Type': 'application/json'
+              'Content-Type': 'application/json',
+              'Access-Control-Allow-Origin':'*',
             }
           })
-              .then((resp) => resp.json())
-              .then(function (response) {
-                console.info('fetch()', response);
-                return response;
-              });
+             .then(response => response.json())
+             .then(json => {
+               this.result = true
+               this.message = json.message
+             })
         } catch (error) {
           console.error('Ошибка:', error);
         }
